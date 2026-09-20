@@ -7,6 +7,7 @@ Actions Lab is a small full-stack learning project for practicing GitHub Actions
 ```bash
 npm install
 npm run dev
+
 ```
 
 Open <http://localhost:3000>.
