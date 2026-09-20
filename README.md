@@ -2,6 +2,8 @@
 
 Actions Lab is a small full-stack learning project for practicing GitHub Actions. It has an Express backend, a browser frontend, automated tests, a build step, and a Docker image workflow.
 
+This is the test project to learn.
+
 ## Run locally
 
 ```bash
