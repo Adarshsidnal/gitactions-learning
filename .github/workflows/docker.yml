@@ -1,0 +1,24 @@
+name: Container image
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: read
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build --tag actions-lab:${{ github.sha }} .
+        
+      - name: Smoke test container
+        run: |
+          docker run --detach --publish 3000:3000 --name actions-lab actions-lab:${{ github.sha }}
+          curl --fail --retry 5 --retry-delay 2 http://localhost:3000/api/health

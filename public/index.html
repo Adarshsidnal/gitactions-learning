@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A hands-on GitHub Actions learning dashboard." />
+    <title>Actions Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Actions Lab home"><span class="brand-mark">&gt;_</span> ACTIONS LAB</a>
+        <span class="status"><span class="status-dot"></span> local workspace</span>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">MISSION 01 / SHIP WITH CONFIDENCE</p>
+        <h1>Turn commits into<br /><em>momentum.</em></h1>
+        <p class="intro-copy">A tiny app with a real API, a real test suite, and a pipeline you can break safely. Complete the lab, then inspect every green check.</p>
+      </section>
+
+      <section class="metrics" aria-label="Progress summary">
+        <div><span class="metric-label">PROGRESS</span><strong id="progress">0%</strong></div>
+        <div><span class="metric-label">LESSONS</span><strong id="lesson-count">0 / 0</strong></div>
+        <div><span class="metric-label">API STATUS</span><strong class="api-status"><span class="status-dot"></span> online</strong></div>
+      </section>
+
+      <section class="lesson-section">
+        <div class="section-heading"><div><p class="eyebrow">YOUR RUNBOOK</p><h2>Three steps to production</h2></div><span class="mono">v1.0 / main</span></div>
+        <div id="lessons" class="lesson-list" aria-live="polite"></div>
+      </section>
+
+      <footer><span>BUILT FOR THE CURIOUS</span><span class="mono">push often · learn faster</span></footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
